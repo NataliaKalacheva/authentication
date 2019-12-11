@@ -17,7 +17,10 @@
 }
 
 .login-greeting-screen {
-  background: var(--teal);
+  background: url("https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg");
+  filter: saturate(0.6);
+
+  background-position-y: top;
   width: 50%;
   padding: 20px;
 }
@@ -37,4 +40,14 @@
 
 .login-greeting-screen .login-greeting-screen-description {
   line-height: 1.4;
+}
+
+.modal-content.card-image {
+  background: linear-gradient(to top, #23074d, #cc5333);
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 700px;
+  }
 }
