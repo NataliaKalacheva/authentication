@@ -10249,3 +10249,28 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.date-birth {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date-birth h3,
+.gender h3 {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  margin-bottom: 0.5rem;
+}
+
+#day-birth,
+#month-birth {
+  width: 70px;
+  margin-right: 10px;
+}
+#year-birth {
+  width: 100px;
+}
+

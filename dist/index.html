@@ -187,14 +187,16 @@
               	  </div>
               
               	  <div class="form-row mt-3">
-              	    <div class="col">
-              	      <div class="custom-control custom-control-inline custom-radio mt-5">
+              	    <div class="col gender">
+                      <h3>Gender</h3>
+              	      <div class="custom-control custom-control-inline custom-radio mt-3">
               	        <input
               	          type="radio"
               	          class="custom-control-input"
               	          id="customControlValidation2"
                           name="radio-stacked"
                           data-key="gender_orientation"
+                          value="Male"
               	          required
               	        />
               	        <label
@@ -203,12 +205,13 @@
               	          >Male</label
               	        >
               	      </div>
-              	      <div class="custom-control custom-control-inline custom-radio mb-3 mt-5">
+              	      <div class="custom-control custom-control-inline custom-radio mb-3 mt-3">
               	        <input
               	          type="radio"
               	          class="custom-control-input"
               	          id="customControlValidation3"
                           name="radio-stacked"
+                          value="Female"
                           data-key="gender_orientation"
               	          required
               	        />
@@ -219,17 +222,12 @@
               	        >
               	      </div>    
               	    </div>
-              	    <div class="col">
-              	      <label for="birthDate">Date of birth</label>
-              	  <input
-              	    type="date"
-              	    class="form-control"
-              	    id="birthDate"
-              	    placeholder="Date of birth"
-                    data-required="date"
-                    data-key="date_of_birth"
-              	    data-invalid-message="Please provide valid date DD.MM.YYYY"
-              	  />
+              	    <div class="col date-birth">
+              	      <h3>Date of birth</h3>
+                  <input id="day-birth" type="number" class="form-control"  name="date" min="1" max="31" 
+                  data-key="date_of_birth_day" data-required="day" placeholder="DD"/>
+<input id="month-birth" type="number" name="month" class="form-control" min="1" max="12"  data-key="date_of_birth_month" data-required="month" placeholder="MM"/>
+<input id="year-birth" type="number" name="year" class="form-control" min="1900" max="9999" data-key="date_of_birth_year" data-required="year" placeholder="YYYY">
               	    </div>
               	  </div>
               
@@ -281,5 +279,5 @@
     <!-- Modal -->
 
    
-  <script type="text/javascript" src="polyfill.b2aecb09060003edcf93.js"></script><script type="text/javascript" src="app.b2aecb09060003edcf93.js"></script></body>
+  <script type="text/javascript" src="polyfill.d1255c2309546a1af185.js"></script><script type="text/javascript" src="app.d1255c2309546a1af185.js"></script></body>
 </html>
