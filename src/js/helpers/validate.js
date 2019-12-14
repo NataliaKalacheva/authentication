@@ -1,6 +1,6 @@
 const regExDic = {
   email: /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/,
-  password: /^[0-9a-zA-Z-]{4,}$/, // min 4 symbols
+  password: /^[0-9a-zA-Z-]{8,}$/, // min 8 symbols
   name: /^[a-zA-Z]+$/,
   phone: /^([\+]+)*[0-9\x20\x28\x29\-]{5,20}$/,
   date: /[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/,
@@ -19,7 +19,6 @@ const regExDic = {
  */
 
 export function validate(el) {
-  console.log(el.value);
   const regExName = el.dataset.required; // get input name for validation
   if (!regExDic[regExName]) return true; // this input doesn`t need validation
 

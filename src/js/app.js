@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import UI from "./config/ui.config";
 import { validate } from "./helpers/validate";
 import { showInputError } from "./views/form";
-import { removeInputError } from "./views/form";
+import { removeInputError, closeModalForm } from "./views/form";
 import { login } from "./services/auth.service";
 import { registration } from "./services/reg.service";
 import { notify } from "./views/notification";
@@ -78,10 +78,19 @@ async function registrationSubmit() {
     return isValideInput;
   });
   if (!isValidForm) return;
-  console.log("continue");
+
   try {
+    console.log(regInputs);
     await registration(regInputs);
+    registartionForm.reset();
+    closeModalForm();
+    notify({
+      msg:
+        "User created success. On your email sended link. Please verify your email.",
+      className: "alert-success"
+    });
   } catch (error) {
+    console.log(error);
     notify({ msg: "Registration failed", className: "alert-danger" });
   }
 }

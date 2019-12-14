@@ -22,6 +22,14 @@ export function showInputError(el) {
   parent.insertAdjacentHTML("beforeend", template);
 }
 
+export function closeModalForm() {
+  const modalForm = document.getElementById("darkModalForm");
+  const modalBackdrop = document.querySelector(".modal-backdrop");
+  modalForm.classList.remove("show");
+  if (modalBackdrop) {
+    modalBackdrop.classList.remove("show");
+  }
+}
 /**
  * Function removeInputError
  * @param {HTMLInputElement} el
