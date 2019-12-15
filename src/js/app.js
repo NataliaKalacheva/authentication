@@ -4,12 +4,14 @@ import "bootstrap/dist/js/bootstrap.min.js";
 
 import UI from "./config/ui.config";
 import { validate } from "./helpers/validate";
+import { autocomplete } from "./helpers/autocomplete";
 import { showInputError } from "./views/form";
 import { removeInputError, closeModalForm } from "./views/form";
 import { login } from "./services/auth.service";
 import { registration } from "./services/reg.service";
 import { notify } from "./views/notification";
 import { getNews } from "./services/news.service";
+import { getCountries } from "./services/countries.service";
 
 const {
   form,
@@ -116,3 +118,6 @@ async function onSubmit(inputs) {
     notify({ msg: "Login failed", className: "alert-danger" });
   }
 }
+
+const countries = getCountries();
+console.log(countries);
