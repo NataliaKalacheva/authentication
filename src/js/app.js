@@ -12,6 +12,8 @@ import { registration } from "./services/reg.service";
 import { notify } from "./views/notification";
 import { getNews } from "./services/news.service";
 import { getCountries } from "./services/countries.service";
+import { get } from "https";
+
 
 const {
   form,
@@ -69,6 +71,9 @@ regInputs.forEach(el =>
     removeInputError(el);
   })
 );
+
+regCountry.addEventListener('input', () => getCountries(regCountry));
+
 // Handlers
 
 async function registrationSubmit() {
@@ -119,5 +124,13 @@ async function onSubmit(inputs) {
   }
 }
 
-const countries = getCountries();
-console.log(countries);
+
+// let countries = [];
+
+// getCountries().then(countries => {
+//   countries.forEach(item =>
+//     countries.push(item));
+// })
+
+// console.log(countries);
+// autocomplete(regCountry, getCountries);

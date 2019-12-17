@@ -76,43 +76,19 @@
   width: 100px;
 }
 
-.autocomplete-wrap {
+#autocomplete-country {
   position: relative;
-  width: 300px;
 }
 
-.autocomplete-input {
-  width: 100%;
-}
-
-.autocomplete-list {
+.matchList {
   position: absolute;
-  top: 100%;
-  border: 1px solid #97b46c;
+ 
   width: 100%;
-  display: none;
-  z-index: 9999;
-  max-height: 400px;
-  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
 }
 
-.autocomplete-wrap.active .autocomplete-list {
-  display: block;
-  border-radius: 0 0 3px 3px;
-}
-
-.autocomplete-item {
-  padding: 8px 10px;
-  font-size: 14px;
+.list-group-item:hover {
+  background: royalblue;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-.autocomplete-item:hover,
-.autocomplete-item.focused {
-  background: #eee;
-}
-
-.autocomplete-wrap.active .autocomplete-input {
-  border-radius: 3px 3px 0 0;
-  border-bottom: 1px solid transparent;
 }
