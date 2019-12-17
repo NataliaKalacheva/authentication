@@ -9,8 +9,6 @@ const regExDic = {
   // year: /^(19[5-9]d|20[0-4]d|2050)$/
 };
 
-///   denis.m.pcspace@gmail.com  - login
-///   dmgame12345                -  password
 
 /**
  * Function validate. Check input on RegExp provided in regExDic by input data-required type
