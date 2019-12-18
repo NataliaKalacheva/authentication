@@ -138,16 +138,18 @@
               </div>
 
               <div class="form-row mt-3">
-                <div id="autocomplete-city" class="col">
-                  <label for="city">City</label>
-                  <input type="text" class="form-control" id="city" placeholder="City" data-required="city"
-                    data-key="city" />
-                  <div class="matchList"></div>
-                </div>
+
                 <div id="autocomplete-country" class="col">
                   <label for="country">Country</label>
                   <input type="text" class="form-control" id="country" data-key="country" placeholder="Country"
                     data-required="country" autocomplete="off" />
+                  <div class="matchList"></div>
+                </div>
+
+                <div id="autocomplete-city" class="col">
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" id="city" placeholder="City" data-required="city"
+                    data-key="city" disabled />
                   <div class="matchList"></div>
                 </div>
               </div>

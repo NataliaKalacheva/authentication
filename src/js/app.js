@@ -10,7 +10,7 @@ import { login } from "./services/auth.service";
 import { registration } from "./services/reg.service";
 import { notify } from "./views/notification";
 import { getNews } from "./services/news.service";
-import { getCountries, getCities } from "./services/autocomplete.service";
+import { autocompleteCountries, autocompleteCities } from "./services/autocomplete.service";
 
 
 const {
@@ -70,9 +70,9 @@ regInputs.forEach(el =>
   })
 );
 
-regCountry.addEventListener('input', () => getCountries(regCountry));
+regCountry.addEventListener('input', () => autocompleteCountries(regCountry));
 
-regCity.addEventListener('input', () => getCities(regCity, regCountry));
+regCity.addEventListener('input', () => autocompleteCities(regCity, regCountry));
 
 // Handlers
 
